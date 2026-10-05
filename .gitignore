@@ -6,7 +6,6 @@ build/
 dist/
 data/cache/
 models/*.joblib
-reports/*.png
 .pytest_cache/
 .DS_Store
 journal/*.csv
