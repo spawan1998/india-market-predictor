@@ -1,0 +1,2 @@
+date,symbol,direction,setup,entry,stop,target,qty,risk_rupees,exit_date,exit_price,pnl_rupees,r_multiple,followed_plan,mistake,lesson
+2026-10-06,RELIANCE,long,20d breakout + above SMA50,1450.00,1410.00,1530.00,50,2000,,,,,yes,,

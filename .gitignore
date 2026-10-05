@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+dist/
+data/cache/
+models/*.joblib
+reports/*.png
+.pytest_cache/
+.DS_Store
+journal/*.csv
+!journal/trade_journal_template.csv

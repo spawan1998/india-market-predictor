@@ -1,0 +1,32 @@
+[project]
+name = "india-market-predictor"
+version = "0.1.0"
+description = "Educational short-term trend predictor and scanner for Indian equities (NIFTY, NIFTY 50 stocks)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Pawan Saini" }]
+dependencies = [
+    "yfinance>=0.2.50",
+    "pandas>=2.1",
+    "numpy>=1.26",
+    "scikit-learn>=1.4",
+    "matplotlib>=3.8",
+    "rich>=13.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+imp = "market_predictor.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["market_predictor*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
