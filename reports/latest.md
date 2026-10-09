@@ -1,18 +1,18 @@
 ## NIFTY50 daily read: 2026-10-09
 
-Close **22,520.45** (2026-10-09). Model P(up over next 5 sessions) = **0.576**: mild bullish lean.
+Close **22,520.45** (2026-10-09). Model P(up over next 5 sessions) = **0.597**: mild bullish lean.
 
 ![price](./NIFTY50_price.png)
 
 ## How much to trust it
 
-Walk-forward out-of-sample: accuracy 0.525, balanced 0.499, AUC 0.506, always-up baseline 0.567 over 3651 predictions. **No proven edge** (AUC ~0.5): treat the probability as noise. Close is below the 200-day SMA.
+Walk-forward out-of-sample: accuracy 0.518, balanced 0.493, AUC 0.501, always-up baseline 0.567 over 3651 predictions. **No proven edge** (AUC ~0.5): treat the probability as noise. Close is below the 200-day SMA.
 
 | strategy | CAGR | max DD | Sharpe | switches |
 |---|---|---|---|---|
-| ml | -1.7% | -42.0% | -0.06 | 543 |
+| ml | -2.0% | -46.0% | -0.09 | 571 |
 | sma200 | +4.0% | -28.6% | 0.42 | 122 |
-| combo | -3.6% | -50.6% | -0.37 | 454 |
+| combo | -3.7% | -51.2% | -0.39 | 484 |
 | buy_and_hold | +10.7% | -38.4% | 0.73 | 1 |
 
 Costs 20.0 bps per switch; ml enters above 0.55, exits below 0.50.
@@ -41,10 +41,10 @@ Costs 20.0 bps per switch; ml enters above 0.55, exits below 0.50.
 | symbol     |   close |   score |   rsi14 |   ret_1m |   rel_3m |
 |:-----------|--------:|--------:|--------:|---------:|---------:|
 | POWERGRID  |  249.15 |       0 |      36 |     -6.2 |     -4.6 |
-| TATACONSUM |  955    |       0 |      38 |     -5.8 |     -7.1 |
-| TMPV       |  279.9  |       0 |      37 |     -8.7 |    -10.2 |
 | ASIANPAINT | 2339.1  |       0 |      36 |     -5.7 |     -5.7 |
 | HINDUNILVR | 1856.7  |       0 |      39 |     -6.2 |     -6.7 |
+| TATACONSUM |  955    |       0 |      38 |     -5.8 |     -7.1 |
+| TMPV       |  279.9  |       0 |      37 |     -8.7 |    -10.2 |
 
 ## Disclaimer
 
