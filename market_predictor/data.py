@@ -19,9 +19,10 @@ DEFAULT_START = "2008-01-01"
 COLUMNS = ["Open", "High", "Low", "Close", "Volume"]
 
 
-def _cache_path(ticker: str) -> Path:
+def _cache_path(ticker: str, start: str = DEFAULT_START) -> Path:
+    """One cache file per (ticker, start) so a short scan download never shadows full history."""
     safe = ticker.replace("^", "_").replace("=", "_").replace("&", "_")
-    return CACHE_DIR / f"{safe}.csv"
+    return CACHE_DIR / f"{safe}__{start}.csv"
 
 
 def _flatten(df: pd.DataFrame) -> pd.DataFrame:
@@ -47,7 +48,7 @@ def _is_fresh(path: Path) -> bool:
 def fetch(symbol: str, start: str = DEFAULT_START, refresh: bool = False) -> pd.DataFrame:
     """Return daily OHLCV for a symbol (plain NSE name, index name or Yahoo ticker)."""
     ticker = to_yahoo(symbol)
-    path = _cache_path(ticker)
+    path = _cache_path(ticker, start)
     if not refresh and _is_fresh(path):
         return pd.read_csv(path, index_col="Date", parse_dates=True)
 
@@ -68,7 +69,7 @@ def fetch_many(symbols: list[str], start: str = "2022-01-01", refresh: bool = Fa
     out: dict[str, pd.DataFrame] = {}
     need = []
     for t in tickers:
-        p = _cache_path(t)
+        p = _cache_path(t, start)
         if not refresh and _is_fresh(p):
             out[t] = pd.read_csv(p, index_col="Date", parse_dates=True)
         else:
@@ -82,7 +83,7 @@ def fetch_many(symbols: list[str], start: str = "2022-01-01", refresh: bool = Fa
                 df = _flatten(sub)
                 if df.empty:
                     continue
-                df.to_csv(_cache_path(t))
+                df.to_csv(_cache_path(t, start))
                 out[t] = df
             except (KeyError, ValueError):
                 continue

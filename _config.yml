@@ -27,3 +27,5 @@ exclude:
   - app.py
   - .venv/
   - reports/latest_scan.txt
+include:
+  - app/

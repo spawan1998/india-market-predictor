@@ -21,10 +21,12 @@ jobs:
       - run: pip install -e . tabulate
       - run: python -m market_predictor report --symbol NIFTY50 --horizon 5 --refresh
       - run: python -m market_predictor scan --capital 200000 --risk 1 --top 15 | tee reports/latest_scan.txt
+      - name: precompute interactive app data (NIFTY, BANKNIFTY, NIFTY 50)
+        run: python -m market_predictor site --workers 2
       - name: commit report
         run: |
           git config user.name "github-actions"
           git config user.email "actions@users.noreply.github.com"
-          git add reports/
+          git add reports/ app/data/
           git commit -m "report: $(date -u +%F)" || echo "nothing to commit"
           git push

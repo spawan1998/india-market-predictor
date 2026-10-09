@@ -4,6 +4,7 @@ Learn short-term trading on the Indian market the honest way, with a tool that
 shows you what is and is not predictable.
 
 **Website:** [spawan1998.github.io/india-market-predictor](https://spawan1998.github.io/india-market-predictor/)
+**Interactive chart + prediction for NIFTY, BANK NIFTY and every NIFTY 50 stock:** [app/](https://spawan1998.github.io/india-market-predictor/app/)
 **Today's NIFTY read and scan:** [reports/latest](reports/latest.md) (updated every weekday after the close by GitHub Actions)
 **Course:** start at [docs/00-read-this-first](docs/00-read-this-first.md)
 

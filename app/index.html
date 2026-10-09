@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>India Market Predictor: interactive</title>
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js" charset="utf-8"></script>
+<style>
+  :root {
+    --surface:#fcfcfb; --page:#f9f9f7; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
+    --grid:#e1e0d9; --axis:#c3c2b7; --blue:#2a78d6; --orange:#eb6834; --aqua:#1baf7a; --violet:#4a3aa7;
+    --good:#006300; --warn:#8a5a00; --warnbg:#fff4d6; --goodbg:#e6f4e6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --surface:#1a1a19; --page:#0d0d0d; --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781;
+            --grid:#2c2c2a; --axis:#383835; --blue:#3987e5; --orange:#d95926; --aqua:#199e70; --violet:#9085e9;
+            --good:#0ca30c; --warn:#fab219; --warnbg:#2b2410; --goodbg:#102b10; }
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--page); color:var(--ink); font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+  header { padding:16px 20px 8px; }
+  header h1 { margin:0 0 4px; font-size:20px; }
+  header p { margin:0; color:var(--ink2); font-size:13px; }
+  header a { color:var(--blue); }
+  .controls { display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding:8px 20px; }
+  .controls label { font-size:13px; color:var(--ink2); }
+  select, input { font:inherit; padding:6px 10px; border:1px solid var(--axis); border-radius:6px; background:var(--surface); color:var(--ink); }
+  input { width:180px; }
+  .tiles { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; padding:8px 20px; }
+  .tile { background:var(--surface); border:1px solid var(--grid); border-radius:8px; padding:10px 12px; }
+  .tile .k { font-size:12px; color:var(--muted); }
+  .tile .v { font-size:22px; font-variant-numeric:tabular-nums; }
+  .tile .s { font-size:12px; color:var(--ink2); }
+  .note { margin:6px 20px; padding:10px 12px; border-radius:8px; font-size:14px; }
+  .note.warn { background:var(--warnbg); color:var(--warn); }
+  .note.good { background:var(--goodbg); color:var(--good); }
+  #chart { height:560px; margin:0 8px; }
+  table { border-collapse:collapse; width:100%; font-size:13px; font-variant-numeric:tabular-nums; }
+  th, td { padding:6px 8px; border-bottom:1px solid var(--grid); text-align:right; }
+  th:first-child, td:first-child { text-align:left; }
+  th { color:var(--muted); font-weight:500; cursor:pointer; }
+  tbody tr:hover { background:var(--surface); cursor:pointer; }
+  .wrap { padding:8px 20px 40px; }
+  .wrap h2 { font-size:16px; margin:16px 0 8px; }
+  .fine { color:var(--muted); font-size:12px; }
+  .dot { display:inline-block; width:8px; height:8px; border-radius:50%; margin-right:6px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>India Market Predictor: interactive</h1>
+  <p>Pick a symbol. P(up) is the model's probability that the close is higher after the horizon; the walk-forward AUC beside it says how much that probability has been worth historically (0.50 = coin flip). Recomputed every weekday after the NSE close. <a href="../">Course and daily report</a> · <a href="https://github.com/spawan1998/india-market-predictor">Source</a></p>
+</header>
+
+<div class="controls">
+  <label for="sym">Symbol</label>
+  <select id="sym"></select>
+  <label for="find">or type to search</label>
+  <input id="find" list="symlist" placeholder="RELIANCE, TCS, NIFTY50 ...">
+  <datalist id="symlist"></datalist>
+  <label for="range">Range</label>
+  <select id="range"><option value="120">6 months</option><option value="250" selected>1 year</option><option value="500">2 years</option></select>
+  <span id="gen" class="fine"></span>
+</div>
+
+<div class="tiles" id="tiles"></div>
+<div id="note" class="note"></div>
+<div id="chart"></div>
+
+<div class="wrap">
+  <h2>All symbols (click a row)</h2>
+  <p class="fine">Sorted by P(up). A high P(up) with AUC near 0.50 is noise; look for AUC at or above 0.53 before paying attention. "Above SMA-200" is the trend regime: the course says no new longs below it.</p>
+  <table id="tbl"><thead><tr>
+    <th data-k="symbol">Symbol</th><th data-k="close">Close</th><th data-k="p_up">P(up)</th><th data-k="auc">AUC</th>
+    <th data-k="accuracy">Accuracy</th><th data-k="baseline">Always-up</th><th data-k="above_sma200">Above SMA-200</th>
+  </tr></thead><tbody></tbody></table>
+  <h2>Backtest for the selected symbol (out-of-sample, 20 bps per switch)</h2>
+  <table id="bt"><thead><tr><th>Strategy</th><th>CAGR</th><th>Max drawdown</th><th>Sharpe</th><th>Time in market</th><th>Switches</th></tr></thead><tbody></tbody></table>
+  <p class="fine">Educational tool, not investment advice. Data: Yahoo Finance (daily, adjusted). Model: gradient boosting on 45 price/volatility/context features, retrained every 126 sessions in an expanding walk-forward. See the course chapter "How the predictor works".</p>
+</div>
+
+<script>
+const css = k => getComputedStyle(document.documentElement).getPropertyValue(k).trim();
+const base = './data/';
+let index = null, sortKey = 'p_up', sortDir = -1, current = null;
+const pct = v => v == null ? 'n/a' : (v*100).toFixed(1) + '%';
+const spct = v => v == null ? 'n/a' : (v >= 0 ? '+' : '') + (v*100).toFixed(1) + '%';
+const num = v => v == null ? 'n/a' : v.toLocaleString('en-IN', {maximumFractionDigits: 2});
+
+async function init() {
+  index = await (await fetch(base + 'index.json?' + Date.now())).json();
+  document.getElementById('gen').textContent = `data generated ${index.generated}, horizon ${index.horizon} sessions`;
+  const sel = document.getElementById('sym'), dl = document.getElementById('symlist');
+  const syms = index.symbols.filter(s => !s.error).map(s => s.symbol).sort();
+  for (const s of syms) { sel.add(new Option(s, s)); dl.appendChild(new Option(s, s)); }
+  sel.onchange = () => load(sel.value);
+  document.getElementById('find').onchange = e => { const v = e.target.value.trim().toUpperCase(); if (syms.includes(v)) { sel.value = v; load(v); } };
+  document.getElementById('range').onchange = () => current && draw(current);
+  document.querySelectorAll('#tbl th').forEach(th => th.onclick = () => { const k = th.dataset.k; sortDir = (sortKey === k) ? -sortDir : -1; sortKey = k; renderTable(); });
+  renderTable();
+  const first = new URLSearchParams(location.search).get('s');
+  const start = (first && syms.includes(first.toUpperCase())) ? first.toUpperCase() : (syms.includes('NIFTY50') ? 'NIFTY50' : syms[0]);
+  sel.value = start; load(start);
+}
+
+function renderTable() {
+  const rows = index.symbols.filter(s => !s.error).slice().sort((a, b) => {
+    const x = a[sortKey], y = b[sortKey];
+    if (typeof x === 'string') return sortDir * x.localeCompare(y);
+    return sortDir * ((x ?? -1) - (y ?? -1));
+  });
+  const tb = document.querySelector('#tbl tbody'); tb.innerHTML = '';
+  for (const r of rows) {
+    const tr = document.createElement('tr');
+    const edge = r.auc != null && r.auc >= 0.53;
+    tr.innerHTML = `<td><span class="dot" style="background:${edge ? css('--aqua') : css('--axis')}"></span>${r.symbol}</td>
+      <td>${num(r.close)}</td><td>${r.p_up?.toFixed(3) ?? 'n/a'}</td><td>${r.auc?.toFixed(3) ?? 'n/a'}</td>
+      <td>${pct(r.accuracy)}</td><td>${pct(r.baseline)}</td><td>${r.above_sma200 == null ? 'n/a' : (r.above_sma200 ? 'yes' : 'no')}</td>`;
+    tr.onclick = () => { document.getElementById('sym').value = r.symbol; load(r.symbol); window.scrollTo({top: 0, behavior: 'smooth'}); };
+    tb.appendChild(tr);
+  }
+}
+
+async function load(sym) {
+  const d = await (await fetch(base + sym + '.json?' + Date.now())).json();
+  current = d;
+  history.replaceState(null, '', '?s=' + sym);
+  const m = d.metrics, noEdge = (m.auc == null || m.auc < 0.53);
+  document.getElementById('tiles').innerHTML = [
+    ['Close', num(d.close), d.last_date],
+    [`P(up in ${d.horizon} sessions)`, d.p_up.toFixed(3), d.stance],
+    ['Walk-forward AUC', m.auc == null ? 'n/a' : m.auc.toFixed(3), `accuracy ${pct(m.accuracy)} vs always-up ${pct(m.baseline_always_up)}`],
+    ['200-day SMA', num(d.sma200), d.above_sma200 == null ? '' : (d.above_sma200 ? 'price ABOVE: bull regime' : 'price BELOW: no new longs')],
+  ].map(([k, v, s]) => `<div class="tile"><div class="k">${k}</div><div class="v">${v}</div><div class="s">${s}</div></div>`).join('');
+  const note = document.getElementById('note');
+  note.className = 'note ' + (noEdge ? 'warn' : 'good');
+  note.textContent = noEdge
+    ? `No proven edge on ${d.symbol}: out-of-sample AUC is about 0.5 over ${m.n_predictions} predictions, so the probability is closer to noise than to a forecast. Use the SMA-200 regime line and the course's risk rules instead.`
+    : `${d.symbol} shows a small out-of-sample edge (AUC ${m.auc.toFixed(3)} over ${m.n_predictions} predictions). Still size positions by risk, never by conviction.`;
+  const bt = document.querySelector('#bt tbody'); bt.innerHTML = '';
+  for (const s of d.backtest) {
+    bt.insertAdjacentHTML('beforeend', `<tr><td>${s.name}</td><td>${spct(s.cagr)}</td><td>${spct(s.max_drawdown)}</td><td>${s.sharpe?.toFixed(2) ?? 'n/a'}</td><td>${pct(s.time_in_market)}</td><td>${s.n_trades}</td></tr>`);
+  }
+  draw(d);
+}
+
+function draw(d) {
+  const n = parseInt(document.getElementById('range').value, 10);
+  const S = d.series, k = Math.max(0, S.date.length - n);
+  const x = S.date.slice(k);
+  const dark = matchMedia('(prefers-color-scheme: dark)').matches;
+  const traces = [
+    {x, y: S.close.slice(k), name: 'Close', type: 'scatter', mode: 'lines', line: {color: css('--blue'), width: 2}, hovertemplate: '%{y:,.2f}<extra>Close</extra>'},
+    {x, y: S.sma50.slice(k), name: 'SMA 50', type: 'scatter', mode: 'lines', line: {color: css('--orange'), width: 1.5}, hovertemplate: '%{y:,.2f}<extra>SMA 50</extra>'},
+    {x, y: S.sma200.slice(k), name: 'SMA 200', type: 'scatter', mode: 'lines', line: {color: css('--aqua'), width: 1.5}, hovertemplate: '%{y:,.2f}<extra>SMA 200</extra>'},
+    {x, y: S.p_up.slice(k), name: 'P(up), out-of-sample', type: 'scatter', mode: 'lines', line: {color: css('--violet'), width: 1.5}, xaxis: 'x', yaxis: 'y2', hovertemplate: '%{y:.2f}<extra>P(up)</extra>'},
+  ];
+  const layout = {
+    paper_bgcolor: css('--surface'), plot_bgcolor: css('--surface'), font: {color: css('--ink'), size: 12},
+    margin: {l: 60, r: 70, t: 30, b: 40}, hovermode: 'x unified', showlegend: true,
+    legend: {orientation: 'h', x: 0, y: 1.08, font: {size: 12}},
+    xaxis: {gridcolor: css('--grid'), linecolor: css('--axis'), zeroline: false, showspikes: true, spikemode: 'across', spikethickness: 1, spikecolor: css('--muted'), spikedash: 'dot'},
+    yaxis: {domain: [0.32, 1], gridcolor: css('--grid'), zeroline: false, tickformat: ',.0f', title: {text: d.symbol, font: {size: 12, color: css('--ink2')}}},
+    yaxis2: {domain: [0, 0.25], range: [0.2, 0.8], gridcolor: css('--grid'), zeroline: false, tickvals: [0.3, 0.5, 0.7], title: {text: 'P(up)', font: {size: 12, color: css('--ink2')}}},
+    shapes: [
+      {type: 'rect', xref: 'paper', x0: 0, x1: 1, yref: 'y2', y0: 0.45, y1: 0.55, fillcolor: css('--grid'), opacity: 0.7, line: {width: 0}},
+      {type: 'line', xref: 'paper', x0: 0, x1: 1, yref: 'y2', y0: 0.5, y1: 0.5, line: {color: css('--muted'), width: 1, dash: 'dot'}},
+    ],
+    annotations: [{xref: 'paper', x: 1, yref: 'y2', y: 0.5, text: 'no edge band', showarrow: false, xanchor: 'left', font: {size: 10, color: css('--muted')}}],
+  };
+  Plotly.react('chart', traces, layout, {responsive: true, displaylogo: false, modeBarButtonsToRemove: ['lasso2d', 'select2d']});
+}
+init();
+</script>
+</body>
+</html>

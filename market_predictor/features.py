@@ -105,7 +105,7 @@ def build_features(df: pd.DataFrame, context: dict[str, pd.DataFrame] | None = N
 
     f["hi20_dist"] = c / h.rolling(20).max() - 1
     f["lo20_dist"] = c / l.rolling(20).min() - 1
-    f["hi52_dist"] = c / h.rolling(252).max() - 1
+    f["hi52_dist"] = c / h.rolling(252, min_periods=60).max() - 1
 
     if v.replace(0, np.nan).notna().mean() > 0.8:  # volume is usable (stocks, not indices)
         lv = np.log1p(v.replace(0, np.nan))

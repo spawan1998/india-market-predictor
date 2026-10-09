@@ -71,6 +71,8 @@ def walk_forward(
     probs = pd.Series(np.nan, index=X.index)
     n = len(X)
     retrains = 0
+    # Recently listed names: shrink the initial window so there is still an out-of-sample record.
+    min_train = min(min_train, max(250, n // 2))
     for start in range(min_train, n, step):
         # Leave a 'horizon' gap so training labels never peek into the test block.
         train_idx = slice(0, start - horizon)
@@ -85,6 +87,8 @@ def walk_forward(
         retrains += 1
 
     both = pd.concat([probs, y], axis=1, keys=["p", "y"]).dropna()
+    if both.empty:
+        return probs, EvalResult(float("nan"), float("nan"), float("nan"), float("nan"), 0, retrains)
     pred = (both["p"] > 0.5).astype(int)
     res = EvalResult(
         accuracy=float(accuracy_score(both["y"], pred)),

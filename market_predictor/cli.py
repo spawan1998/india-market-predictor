@@ -164,6 +164,18 @@ def cmd_update(a):
     console.print(f"cache refreshed: indices, context, {len(got)}/{len(NIFTY50)} NIFTY 50 stocks")
 
 
+def cmd_site(a):
+    from .site import APP_DATA, build
+
+    results = build(a.symbols, a.horizon, a.model, a.step, a.workers)
+    ok = [r for r in results if "error" not in r]
+    bad = [r for r in results if "error" in r]
+    console.print(f"site data -> {APP_DATA}: {len(ok)} symbols ok, {len(bad)} failed"
+                  + (": " + ", ".join(f"{r['symbol']} ({r['error'][:40]})" for r in bad) if bad else ""))
+    if ok:
+        console.print("slowest: " + ", ".join(f"{r['symbol']} {r['seconds']}s" for r in sorted(ok, key=lambda r: -r["seconds"])[:3]))
+
+
 def cmd_report(a):
     today = dt.date.today().isoformat()
     name = display_name(to_yahoo(a.symbol))
@@ -256,6 +268,13 @@ def main(argv=None):
     p.set_defaults(fn=cmd_report)
 
     p = sub.add_parser("update", help="refresh the price cache"); p.set_defaults(fn=cmd_update)
+
+    p = sub.add_parser("site", help="precompute JSON for the web app (app/data/) for NIFTY, BANKNIFTY and NIFTY 50")
+    p.add_argument("--symbols", nargs="*", help="override the symbol list")
+    p.add_argument("--horizon", type=int, default=5); p.add_argument("--model", choices=["gbm", "logit"], default="gbm")
+    p.add_argument("--step", type=int, default=126, help="walk-forward retrain interval (sessions)")
+    p.add_argument("--workers", type=int, default=2)
+    p.set_defaults(fn=cmd_site)
 
     a = ap.parse_args(argv)
     try:
