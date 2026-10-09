@@ -164,6 +164,18 @@ def cmd_update(a):
     console.print(f"cache refreshed: indices, context, {len(got)}/{len(NIFTY50)} NIFTY 50 stocks")
 
 
+def cmd_paper(a):
+    from . import paper
+
+    if a.init:
+        paper.init(a.capital, a.sessions)
+        console.print(f"paper challenge started: {a.capital:,.0f} virtual rupees, {a.sessions} sessions -> {paper.PAPER_DIR}")
+    if a.status:
+        console.print(paper.status())
+    if not a.init and not a.status:
+        console.print(paper.run())
+
+
 def cmd_site(a):
     from .site import APP_DATA, build
 
@@ -268,6 +280,11 @@ def main(argv=None):
     p.set_defaults(fn=cmd_report)
 
     p = sub.add_parser("update", help="refresh the price cache"); p.set_defaults(fn=cmd_update)
+
+    p = sub.add_parser("paper", help="paper-trading challenge: run one session, or --init / --status")
+    p.add_argument("--init", action="store_true", help="start a new challenge (overwrites paper/)")
+    p.add_argument("--capital", type=float, default=200_000); p.add_argument("--sessions", type=int, default=15)
+    p.add_argument("--status", action="store_true"); p.set_defaults(fn=cmd_paper)
 
     p = sub.add_parser("site", help="precompute JSON for the web app (app/data/) for NIFTY, BANKNIFTY and NIFTY 50")
     p.add_argument("--symbols", nargs="*", help="override the symbol list")

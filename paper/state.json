@@ -1,0 +1,32 @@
+{
+ "capital_start": 200000.0,
+ "cash": 200000.0,
+ "max_sessions": 15,
+ "sessions_done": 1,
+ "created": "2026-10-09",
+ "last_run_date": "2026-10-09",
+ "finished": false,
+ "positions": [],
+ "pending": [
+  {
+   "symbol": "KOTAKBANK",
+   "risk_pct": 0.5,
+   "reason": "close 441.00 is above its 50-day and 200-day averages (+7.7% / +10.4%), it beat NIFTY by +24.0% over 3 months, RSI 68, -1.0% from its 20-day high, scan score 4.8/5, model P(up) 0.41 (tie-breaker only, no proven edge)"
+  },
+  {
+   "symbol": "TRENT",
+   "risk_pct": 0.5,
+   "reason": "close 2,918.20 is above its 50-day and 200-day averages (+1.7% / +2.8%), it beat NIFTY by +7.5% over 3 months, RSI 61, -0.6% from its 20-day high, scan score 4.5/5, model P(up) 0.55 (tie-breaker only, no proven edge)"
+  }
+ ],
+ "closed": [],
+ "equity": [
+  {
+   "date": "2026-10-09",
+   "equity": 200000.0,
+   "cash": 200000.0,
+   "nifty": 22520.44921875
+  }
+ ],
+ "nifty_start": 22520.44921875
+}

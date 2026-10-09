@@ -13,6 +13,9 @@ permissions:
 jobs:
   report:
     runs-on: ubuntu-latest
+    env:
+      OMP_NUM_THREADS: "1"   # two worker processes on a two-core runner; stop them fighting over threads
+      COLUMNS: "160"
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -23,10 +26,13 @@ jobs:
       - run: python -m market_predictor scan --capital 200000 --risk 1 --top 15 | tee reports/latest_scan.txt
       - name: precompute interactive app data (NIFTY, BANKNIFTY, NIFTY 50)
         run: python -m market_predictor site --workers 2
+      - name: paper-trading challenge, one session
+        run: if [ -f paper/state.json ]; then python -m market_predictor paper; else echo "no paper challenge"; fi
       - name: commit report
         run: |
           git config user.name "github-actions"
           git config user.email "actions@users.noreply.github.com"
-          git add reports/ app/data/
+          git add reports/ app/data/ paper/
           git commit -m "report: $(date -u +%F)" || echo "nothing to commit"
+          git pull --rebase origin main
           git push

@@ -7,6 +7,7 @@ shows you what is and is not predictable.
 **Interactive chart + prediction for NIFTY, BANK NIFTY and every NIFTY 50 stock:** [app/](https://spawan1998.github.io/india-market-predictor/app/)
 **Today's NIFTY read and scan:** [reports/latest](reports/latest.md) (updated every weekday after the close by GitHub Actions)
 **Course:** start at [docs/00-read-this-first](docs/00-read-this-first.md)
+**Paper-trading challenge (virtual Rs 2 lakh, 15 sessions, every decision explained):** [paper/journal](paper/journal.md)
 
 > **Read [docs/00-read-this-first.md](docs/00-read-this-first.md) before anything else.**
 > SEBI's own studies show roughly 9 in 10 retail F&O traders lose money. This repo
@@ -22,6 +23,8 @@ shows you what is and is not predictable.
 | `imp scan` | Ranks NIFTY 50 stocks by trend + momentum and prints a risk-controlled position size (entry, stop, quantity) |
 | `imp size` | Position-size calculator: capital, risk %, ATR stop |
 | `imp report` | Markdown report with charts in `reports/`; a GitHub Action runs it every weekday after the close |
+| `imp site` | Precomputes the JSON behind the interactive page `app/` for NIFTY, BANK NIFTY and the NIFTY 50 |
+| `imp paper` | Rules-based paper-trading challenge; one session per run, reasoning written to `paper/journal.md` |
 | `journal/` | Trade journal template (the single highest-value habit) |
 
 ## Quick start
