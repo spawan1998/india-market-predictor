@@ -207,7 +207,18 @@ def cmd_report(a):
         ("Disclaimer", DISCLAIMER),
     ]
     out = write_markdown(REPORT_DIR / f"{today}_{name}.md", sections)
+    if name == "NIFTY50":
+        write_markdown(REPORT_DIR / "latest.md", sections)
+        _write_report_index()
     console.print(f"report -> {out}")
+
+
+def _write_report_index():
+    """reports/index.md: link list of every dated report, newest first (for the website)."""
+    dated = sorted(REPORT_DIR.glob("20??-??-??_*.md"), reverse=True)
+    lines = ["# Daily reports", "", "[Latest report](./latest.md) is regenerated every weekday after the NSE close.", ""]
+    lines += [f"- [{p.stem.replace('_', ' ')}](./{p.name})" for p in dated]
+    (REPORT_DIR / "index.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
 def main(argv=None):

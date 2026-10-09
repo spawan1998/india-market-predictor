@@ -3,6 +3,10 @@
 Learn short-term trading on the Indian market the honest way, with a tool that
 shows you what is and is not predictable.
 
+**Website:** [spawan1998.github.io/india-market-predictor](https://spawan1998.github.io/india-market-predictor/)
+**Today's NIFTY read and scan:** [reports/latest](reports/latest.md) (updated every weekday after the close by GitHub Actions)
+**Course:** start at [docs/00-read-this-first](docs/00-read-this-first.md)
+
 > **Read [docs/00-read-this-first.md](docs/00-read-this-first.md) before anything else.**
 > SEBI's own studies show roughly 9 in 10 retail F&O traders lose money. This repo
 > exists to keep you out of that statistic, not to hand you a money printer.
@@ -37,6 +41,19 @@ imp report                                    # reports/<date>_NIFTY50.md + PNG 
 
 Data comes from Yahoo Finance (free, daily bars, 15-minute delayed quotes). The
 first run downloads history since 2008 and caches it under `data/cache/`.
+
+### Interactive app (optional)
+
+`app.py` is a small Streamlit front end over the same code: pick a symbol and
+horizon, get the probability, the walk-forward record, charts and the scan.
+
+```bash
+pip install -e ".[app]"
+streamlit run app.py
+```
+
+It can be hosted free on [Streamlit Community Cloud](https://share.streamlit.io):
+sign in with GitHub, pick this repo, main file `app.py`. Nothing else to configure.
 
 ## What the numbers mean
 

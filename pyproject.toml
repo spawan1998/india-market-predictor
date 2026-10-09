@@ -17,6 +17,7 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = ["pytest>=8.0"]
+app = ["streamlit>=1.38", "tabulate>=0.9"]
 
 [project.scripts]
 imp = "market_predictor.cli:main"

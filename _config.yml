@@ -1,0 +1,29 @@
+title: India Market Predictor
+description: Learn swing trading on the Indian market, with an honest NIFTY trend model, a daily NIFTY 50 scan and a 10-chapter course.
+theme: jekyll-theme-cayman
+show_downloads: false
+markdown: kramdown
+plugins:
+  - jekyll-relative-links
+  - jekyll-optional-front-matter
+  - jekyll-readme-index
+  - jekyll-default-layout
+relative_links:
+  enabled: true
+  collections: true
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+exclude:
+  - market_predictor/
+  - tests/
+  - data/
+  - models/
+  - journal/
+  - pyproject.toml
+  - uv.lock
+  - app.py
+  - .venv/
+  - reports/latest_scan.txt
