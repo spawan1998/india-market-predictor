@@ -1,4 +1,4 @@
-## NIFTY50 daily read: 2026-10-09
+## NIFTY50 daily read: 2026-10-12
 
 Close **22,520.45** (2026-10-09). Model P(up over next 5 sessions) = **0.597**: mild bullish lean.
 
