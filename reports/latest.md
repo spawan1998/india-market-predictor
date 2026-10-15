@@ -1,19 +1,19 @@
-## NIFTY50 daily read: 2026-10-14
+## NIFTY50 daily read: 2026-10-15
 
-Close **22,622.70** (2026-10-14). Model P(up over next 5 sessions) = **0.625**: BULLISH lean (strong for this model).
+Close **22,997.35** (2026-10-15). Model P(up over next 5 sessions) = **0.589**: mild bullish lean.
 
 ![price](./NIFTY50_price.png)
 
 ## How much to trust it
 
-Walk-forward out-of-sample: accuracy 0.518, balanced 0.493, AUC 0.501, always-up baseline 0.567 over 3654 predictions. **No proven edge** (AUC ~0.5): treat the probability as noise. Close is below the 200-day SMA.
+Walk-forward out-of-sample: accuracy 0.518, balanced 0.493, AUC 0.501, always-up baseline 0.567 over 3655 predictions. **No proven edge** (AUC ~0.5): treat the probability as noise. Close is below the 200-day SMA.
 
 | strategy | CAGR | max DD | Sharpe | switches |
 |---|---|---|---|---|
-| ml | -2.0% | -46.0% | -0.09 | 571 |
+| ml | -1.9% | -46.0% | -0.08 | 571 |
 | sma200 | +4.0% | -28.6% | 0.42 | 122 |
 | combo | -3.7% | -51.2% | -0.39 | 484 |
-| buy_and_hold | +10.8% | -38.4% | 0.73 | 1 |
+| buy_and_hold | +10.9% | -38.4% | 0.74 | 1 |
 
 Costs 20.0 bps per switch; ml enters above 0.55, exits below 0.50.
 
@@ -25,26 +25,26 @@ Costs 20.0 bps per switch; ml enters above 0.55, exits below 0.50.
 
 | symbol     |   close |   score |   rsi14 |   ret_1m |   rel_3m |   from_20d_high |   atr_pct |
 |:-----------|--------:|--------:|--------:|---------:|---------:|----------------:|----------:|
-| KOTAKBANK  |  438.05 |     4.7 |      64 |      4.5 |     22   |            -1.6 |       2.1 |
-| TECHM      | 1575.2  |     4.6 |      56 |      2.2 |     11.2 |            -0.9 |       2.8 |
-| HCLTECH    | 1327    |     4.1 |      63 |     10   |     20.8 |            -2   |       3   |
-| NESTLEIND  | 1383.2  |     3.7 |      55 |     -0   |      3.2 |            -1   |       2.3 |
-| TCS        | 2304.9  |     3.6 |      65 |      5.3 |     11.9 |            -1.3 |       3   |
-| TRENT      | 2971    |     3.5 |      63 |      6   |      9.6 |            -1.1 |       2.5 |
-| ADANIPORTS | 1748.7  |     3.5 |      49 |     -0.9 |      1.7 |            -4.1 |       2.7 |
-| INFY       | 1088    |     3.5 |      59 |      4.8 |      7.1 |            -0.8 |       2.7 |
-| AXISBANK   | 1264.6  |     3.2 |      57 |      1.5 |      2.4 |            -0.9 |       2   |
-| ITC        |  261.5  |     2.6 |      47 |      0.6 |      0.6 |            -3.5 |       2.4 |
+| KOTAKBANK  |  447.95 |     5   |      69 |      9.3 |     23.4 |             0   |       2.1 |
+| TECHM      | 1650    |     4.9 |      65 |      4.7 |     13.7 |             0   |       2.8 |
+| HCLTECH    | 1360    |     4.3 |      67 |      8.5 |     20.2 |            -1.2 |       2.9 |
+| AXISBANK   | 1288    |     3.8 |      62 |      5.3 |      3   |            -0.4 |       2   |
+| TCS        | 2350    |     3.5 |      68 |      5   |     11.8 |            -1.5 |       3   |
+| ICICIBANK  | 1389.4  |     3.4 |      58 |      2.9 |      3.3 |             0   |       1.8 |
+| ADANIPORTS | 1743.2  |     3.4 |      49 |      1.7 |     -0.1 |            -4.4 |       2.6 |
+| INFY       | 1110    |     3.3 |      63 |      3.1 |      7   |            -1.5 |       2.7 |
+| TRENT      | 2949.7  |     3.3 |      61 |      8   |      7.6 |            -1.8 |       2.5 |
+| ITC        |  263.9  |     2.7 |      50 |      2.3 |     -1.1 |            -2.6 |       2.3 |
 
 ## NIFTY 50 swing scan: weakest
 
 | symbol     |   close |   score |   rsi14 |   ret_1m |   rel_3m |
 |:-----------|--------:|--------:|--------:|---------:|---------:|
-| RELIANCE   |  1174.6 |     0.1 |      39 |     -6.6 |     -3.3 |
-| M&M        |  2793.7 |     0.1 |      31 |    -10.1 |     -3.3 |
-| SUNPHARMA  |  1746.4 |     0   |      33 |     -5.1 |     -4.5 |
-| ASIANPAINT |  2344.7 |     0   |      39 |     -5.2 |     -6.1 |
-| SBILIFE    |  1650   |     0   |      37 |     -2.1 |     -5.5 |
+| HINDALCO   |  893.85 |     0.1 |      36 |     -6.8 |     -2.4 |
+| M&M        | 2861.7  |     0.1 |      40 |     -5.5 |     -3.7 |
+| SBILIFE    | 1661.8  |     0   |      40 |      0.5 |     -4.3 |
+| ASIANPAINT | 2350    |     0   |      40 |     -2.2 |     -7.7 |
+| SUNPHARMA  | 1764    |     0   |      38 |     -3.9 |     -5.1 |
 
 ## Disclaimer
 

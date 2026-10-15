@@ -29,3 +29,14 @@ NIFTY 22,623, BELOW its 200-day SMA (24,222): defensive mode, risk halved to 0.5
 - **ORDER for the next open: buy TECHM** (risk 0.5% of equity, stop 2 ATR = about 87 below entry). Why: close 1,575.20 is above its 50-day and 200-day averages (+0.1% / +5.6%), it beat NIFTY by +11.2% over 3 months, RSI 56, -0.9% from its 20-day high, scan score 4.6/5, model P(up) 0.49 (tie-breaker only, no proven edge).
 
 Equity Rs 200,013 (+0.01% since start) vs NIFTY +0.45%. Cash Rs 160,284, 2 open position(s), 1 order(s) for the next open.
+
+## Session 4 of 15: 2026-10-15
+
+NIFTY 22,997, BELOW its 200-day SMA (24,206): defensive mode, risk halved to 0.5% of equity per trade, because the index trend is against new longs.
+- **ENTERED TECHM**: 11 shares at the open 1,600.00 (cost Rs 35). Stop 1,512.78 (2 ATR below, risking Rs 959 = 1R), first target 1,774.44 (+2R). Why: close 1,575.20 is above its 50-day and 200-day averages (+0.1% / +5.6%), it beat NIFTY by +11.2% over 3 months, RSI 56, -0.9% from its 20-day high, scan score 4.6/5, model P(up) 0.49 (tie-breaker only, no proven edge)
+- Holding KOTAKBANK: 50 shares, close 447.95, +243 unrealised (+0.2R), stop 423.40, target 482.50.
+- Holding TRENT: 6 shares, close 2,949.70, +217 unrealised (+0.2R), stop 2,763.95, target 3,212.91.
+- Holding TECHM: 11 shares, close 1,650.00, +550 unrealised (+0.6R), stop 1,512.78, target 1,774.44.
+- **ORDER for the next open: buy ICICIBANK** (risk 0.5% of equity, stop 2 ATR = about 50 below entry). Why: close 1,389.40 is above its 50-day and 200-day averages (+0.3% / +3.3%), it beat NIFTY by +3.3% over 3 months, RSI 58, +0.0% from its 20-day high, scan score 3.4/5, model P(up) 0.54 (tie-breaker only, no proven edge).
+
+Equity Rs 200,895 (+0.45% since start) vs NIFTY +2.12%. Cash Rs 142,649, 3 open position(s), 1 order(s) for the next open.
