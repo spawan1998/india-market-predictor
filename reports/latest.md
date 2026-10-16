@@ -1,16 +1,16 @@
-## NIFTY50 daily read: 2026-10-15
+## NIFTY50 daily read: 2026-10-16
 
-Close **22,997.35** (2026-10-15). Model P(up over next 5 sessions) = **0.589**: mild bullish lean.
+Close **23,146.15** (2026-10-16). Model P(up over next 5 sessions) = **0.588**: mild bullish lean.
 
 ![price](./NIFTY50_price.png)
 
 ## How much to trust it
 
-Walk-forward out-of-sample: accuracy 0.518, balanced 0.493, AUC 0.501, always-up baseline 0.567 over 3655 predictions. **No proven edge** (AUC ~0.5): treat the probability as noise. Close is below the 200-day SMA.
+Walk-forward out-of-sample: accuracy 0.519, balanced 0.493, AUC 0.501, always-up baseline 0.567 over 3656 predictions. **No proven edge** (AUC ~0.5): treat the probability as noise. Close is below the 200-day SMA.
 
 | strategy | CAGR | max DD | Sharpe | switches |
 |---|---|---|---|---|
-| ml | -1.9% | -46.0% | -0.08 | 571 |
+| ml | -1.9% | -46.0% | -0.07 | 571 |
 | sma200 | +4.0% | -28.6% | 0.42 | 122 |
 | combo | -3.7% | -51.2% | -0.39 | 484 |
 | buy_and_hold | +10.9% | -38.4% | 0.74 | 1 |
@@ -25,26 +25,26 @@ Costs 20.0 bps per switch; ml enters above 0.55, exits below 0.50.
 
 | symbol     |   close |   score |   rsi14 |   ret_1m |   rel_3m |   from_20d_high |   atr_pct |
 |:-----------|--------:|--------:|--------:|---------:|---------:|----------------:|----------:|
-| KOTAKBANK  |  447.95 |     5   |      69 |      9.3 |     23.4 |             0   |       2.1 |
-| TECHM      | 1650    |     4.9 |      65 |      4.7 |     13.7 |             0   |       2.8 |
-| HCLTECH    | 1360    |     4.3 |      67 |      8.5 |     20.2 |            -1.2 |       2.9 |
-| AXISBANK   | 1288    |     3.8 |      62 |      5.3 |      3   |            -0.4 |       2   |
-| TCS        | 2350    |     3.5 |      68 |      5   |     11.8 |            -1.5 |       3   |
-| ICICIBANK  | 1389.4  |     3.4 |      58 |      2.9 |      3.3 |             0   |       1.8 |
-| ADANIPORTS | 1743.2  |     3.4 |      49 |      1.7 |     -0.1 |            -4.4 |       2.6 |
-| INFY       | 1110    |     3.3 |      63 |      3.1 |      7   |            -1.5 |       2.7 |
-| TRENT      | 2949.7  |     3.3 |      61 |      8   |      7.6 |            -1.8 |       2.5 |
-| ITC        |  263.9  |     2.7 |      50 |      2.3 |     -1.1 |            -2.6 |       2.3 |
+| ICICIBANK  |  1397   |     4.3 |      59 |      2.8 |      2.4 |            -0.1 |       1.8 |
+| BHARTIARTL |  1905   |     4   |      62 |      3.8 |      5.9 |            -0.2 |       2.1 |
+| TECHM      |  1790   |     3.9 |      76 |     14.9 |     18.7 |            -0.4 |       3   |
+| AXISBANK   |  1290   |     3.8 |      63 |      3.9 |      2   |            -0.3 |       2   |
+| KOTAKBANK  |   447.4 |     3.7 |      68 |      7.8 |     19.6 |            -1.3 |       2.1 |
+| HCLTECH    |  1380   |     3.7 |      70 |     11.1 |     20.5 |            -0.3 |       2.9 |
+| INFY       |  1161.2 |     3.7 |      70 |      9.5 |     10.8 |            -0.6 |       2.7 |
+| TCS        |  2465   |     3.6 |      74 |     13.2 |     14.1 |            -0.8 |       3   |
+| ADANIPORTS |  1750.8 |     3.5 |      50 |      1.6 |      0.2 |            -4   |       2.5 |
+| TRENT      |  2958.7 |     3.4 |      62 |      6.8 |      9   |            -1.5 |       2.4 |
 
 ## NIFTY 50 swing scan: weakest
 
 | symbol     |   close |   score |   rsi14 |   ret_1m |   rel_3m |
 |:-----------|--------:|--------:|--------:|---------:|---------:|
-| HINDALCO   |  893.85 |     0.1 |      36 |     -6.8 |     -2.4 |
-| M&M        | 2861.7  |     0.1 |      40 |     -5.5 |     -3.7 |
-| SBILIFE    | 1661.8  |     0   |      40 |      0.5 |     -4.3 |
-| ASIANPAINT | 2350    |     0   |      40 |     -2.2 |     -7.7 |
-| SUNPHARMA  | 1764    |     0   |      38 |     -3.9 |     -5.1 |
+| GRASIM     |  2920   |     0.2 |      38 |     -8.4 |     -0.9 |
+| SUNPHARMA  |  1758.8 |     0   |      37 |     -5.1 |     -4.1 |
+| ONGC       |   222   |     0   |      39 |     -6.3 |     -5   |
+| APOLLOHOSP |  7890   |     0   |      37 |     -9.3 |     -5.6 |
+| MAXHEALTH  |   846   |     0   |      25 |    -17.5 |    -17.5 |
 
 ## Disclaimer
 

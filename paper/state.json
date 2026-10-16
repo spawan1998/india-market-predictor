@@ -1,10 +1,10 @@
 {
  "capital_start": 200000.0,
- "cash": 142648.92590710448,
+ "cash": 123547.58150710448,
  "max_sessions": 15,
- "sessions_done": 4,
+ "sessions_done": 5,
  "created": "2026-10-09",
- "last_run_date": "2026-10-15",
+ "last_run_date": "2026-10-16",
  "finished": false,
  "positions": [
   {
@@ -18,7 +18,7 @@
    "atr": 9.850217887804073,
    "half_taken": false,
    "highest_close": 447.95001220703125,
-   "sessions": 2,
+   "sessions": 3,
    "reason": "close 441.00 is above its 50-day and 200-day averages (+7.7% / +10.4%), it beat NIFTY by +24.0% over 3 months, RSI 68, -1.0% from its 20-day high, scan score 4.8/5, model P(up) 0.41 (tie-breaker only, no proven edge)"
   },
   {
@@ -32,32 +32,52 @@
    "atr": 74.82708085064844,
    "half_taken": false,
    "highest_close": 2987.800048828125,
-   "sessions": 2,
+   "sessions": 3,
    "reason": "close 2,918.20 is above its 50-day and 200-day averages (+1.7% / +2.8%), it beat NIFTY by +7.5% over 3 months, RSI 61, -0.6% from its 20-day high, scan score 4.5/5, model P(up) 0.55 (tie-breaker only, no proven edge)"
   },
   {
    "symbol": "TECHM",
-   "qty": 11,
+   "qty": 6,
    "entry": 1600.0,
    "entry_date": "2026-10-15",
-   "stop": 1512.78,
+   "stop": 1683.87,
    "target": 1774.44,
    "r": 87.22000000000003,
    "atr": 43.60901452349495,
-   "half_taken": false,
-   "highest_close": 1650.0,
-   "sessions": 0,
+   "half_taken": true,
+   "highest_close": 1790.0,
+   "sessions": 1,
    "reason": "close 1,575.20 is above its 50-day and 200-day averages (+0.1% / +5.6%), it beat NIFTY by +11.2% over 3 months, RSI 56, -0.9% from its 20-day high, scan score 4.6/5, model P(up) 0.49 (tie-breaker only, no proven edge)"
-  }
- ],
- "pending": [
+  },
   {
    "symbol": "ICICIBANK",
-   "risk_pct": 0.5,
+   "qty": 20,
+   "entry": 1395.0,
+   "entry_date": "2026-10-16",
+   "stop": 1344.8,
+   "target": 1495.4,
+   "r": 50.200000000000045,
+   "atr": 25.099294270183716,
+   "half_taken": false,
+   "highest_close": 1397.0,
+   "sessions": 0,
    "reason": "close 1,389.40 is above its 50-day and 200-day averages (+0.3% / +3.3%), it beat NIFTY by +3.3% over 3 months, RSI 58, +0.0% from its 20-day high, scan score 3.4/5, model P(up) 0.54 (tie-breaker only, no proven edge)"
   }
  ],
- "closed": [],
+ "pending": [],
+ "closed": [
+  {
+   "symbol": "TECHM",
+   "qty": 5,
+   "entry": 1600.0,
+   "exit": 1774.44,
+   "entry_date": "2026-10-15",
+   "exit_date": "2026-10-16",
+   "pnl": 838.46,
+   "r_multiple": 2.0,
+   "why": "first target +2R hit: booked half, stop to breakeven, trailing the rest"
+  }
+ ],
  "equity": [
   {
    "date": "2026-10-09",
@@ -82,6 +102,12 @@
    "equity": 200894.63,
    "cash": 142648.93,
    "nifty": 22997.349609375
+  },
+  {
+   "date": "2026-10-16",
+   "equity": 202349.78,
+   "cash": 123547.58,
+   "nifty": 23146.150390625
   }
  ],
  "nifty_start": 22520.44921875
