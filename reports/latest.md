@@ -1,4 +1,4 @@
-## NIFTY50 daily read: 2026-10-19
+## NIFTY50 daily read: 2026-10-20
 
 Close **22,888.95** (2026-10-19). Model P(up over next 5 sessions) = **0.522**: NO EDGE - coin flip, stay out or size tiny.
 
