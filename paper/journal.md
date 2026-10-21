@@ -66,3 +66,15 @@ NIFTY 22,889, BELOW its 200-day SMA (24,174): defensive mode, risk halved to 0.5
 - No new orders: already holding the maximum of 4 positions.
 
 Equity Rs 201,307 (+0.65% since start) vs NIFTY +1.64%. Cash Rs 123,548, 4 open position(s), 0 order(s) for the next open.
+
+## Session 7 of 15: 2026-10-21
+
+NIFTY 22,811, BELOW its 200-day SMA (24,158): defensive mode, risk halved to 0.5% of equity per trade, because the index trend is against new longs.
+- Holding KOTAKBANK: 50 shares, close 437.80, -265 unrealised (-0.3R), stop 423.40, target 482.50.
+- Holding TRENT: 6 shares, close 2,822.00, -550 unrealised (-0.6R), stop 2,763.95, target 3,212.91.
+- TECHM: trailing stop raised 1,685.27 -> 1,729.51 (2 ATR under the highest close 1,834.70).
+- Holding TECHM: 6 shares, close 1,834.70, +1,408 unrealised (+2.7R), stop 1,729.51, target 1,774.44.
+- Holding ICICIBANK: 20 shares, close 1,385.00, -200 unrealised (-0.2R), stop 1,344.80, target 1,495.40.
+- No new orders: already holding the maximum of 4 positions.
+
+Equity Rs 201,078 (+0.54% since start) vs NIFTY +1.29%. Cash Rs 123,548, 4 open position(s), 0 order(s) for the next open.
