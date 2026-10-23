@@ -1,19 +1,19 @@
-## NIFTY50 daily read: 2026-10-22
+## NIFTY50 daily read: 2026-10-23
 
-Close **22,687.65** (2026-10-22). Model P(up over next 5 sessions) = **0.557**: mild bullish lean.
+Close **22,600.00** (2026-10-23). Model P(up over next 5 sessions) = **0.457**: NO EDGE - coin flip, stay out or size tiny.
 
 ![price](./NIFTY50_price.png)
 
 ## How much to trust it
 
-Walk-forward out-of-sample: accuracy 0.519, balanced 0.493, AUC 0.501, always-up baseline 0.568 over 3659 predictions. **No proven edge** (AUC ~0.5): treat the probability as noise. Close is below the 200-day SMA.
+Walk-forward out-of-sample: accuracy 0.519, balanced 0.493, AUC 0.501, always-up baseline 0.567 over 3660 predictions. **No proven edge** (AUC ~0.5): treat the probability as noise. Close is below the 200-day SMA.
 
 | strategy | CAGR | max DD | Sharpe | switches |
 |---|---|---|---|---|
-| ml | -2.0% | -46.0% | -0.08 | 571 |
+| ml | -2.0% | -46.0% | -0.09 | 572 |
 | sma200 | +4.0% | -28.6% | 0.42 | 122 |
 | combo | -3.7% | -51.2% | -0.39 | 484 |
-| buy_and_hold | +10.8% | -38.4% | 0.73 | 1 |
+| buy_and_hold | +10.7% | -38.4% | 0.73 | 1 |
 
 Costs 20.0 bps per switch; ml enters above 0.55, exits below 0.50.
 
@@ -25,26 +25,26 @@ Costs 20.0 bps per switch; ml enters above 0.55, exits below 0.50.
 
 | symbol     |    close |   score |   rsi14 |   ret_1m |   rel_3m |   from_20d_high |   atr_pct |
 |:-----------|---------:|--------:|--------:|---------:|---------:|----------------:|----------:|
-| ICICIBANK  |  1398.5  |     4.2 |      59 |      4   |      3.3 |            -0.9 |       1.8 |
-| TECHM      |  1829.1  |     3.8 |      76 |     17.4 |     22.7 |            -0.8 |       2.9 |
-| HCLTECH    |  1421.7  |     3.7 |      74 |     12   |     21.4 |            -0.4 |       2.8 |
-| INFY       |  1153.35 |     3.6 |      64 |     11.1 |     15.1 |            -1.8 |       2.8 |
-| TCS        |  2506.9  |     3.6 |      74 |     18.4 |     19.6 |            -1   |       2.9 |
-| BHARTIARTL |  1895    |     3.6 |      59 |      3.5 |      3.9 |            -1.8 |       2.2 |
-| KOTAKBANK  |   437    |     3.3 |      58 |      5.4 |     20.1 |            -3.6 |       2.1 |
-| WIPRO      |   190.41 |     3   |      74 |     15.7 |     15.9 |            -1.3 |       2.6 |
-| DRREDDY    |  1239    |     3   |      58 |      3.4 |     10.2 |            -1.1 |       2.1 |
-| ULTRACEMCO | 10958    |     2.8 |      52 |     -1.3 |     -0.5 |            -2.3 |       2.4 |
+| ICICIBANK  |  1394.2  |     4.2 |      57 |      4.1 |      3.3 |            -1.2 |       1.8 |
+| TECHM      |  1790    |     3.7 |      72 |     16.3 |     21.3 |            -3   |       3   |
+| BHARTIARTL |  1892.1  |     3.6 |      59 |      4.1 |      4.5 |            -1.9 |       2.3 |
+| ETERNAL    |   317.4  |     3.5 |      47 |     -7.2 |     15.9 |            -7.6 |       3.2 |
+| INFY       |  1153.8  |     3.3 |      64 |     12.1 |     15.5 |            -3.7 |       3.6 |
+| TCS        |  2530    |     3.1 |      75 |     20.8 |     18.7 |            -3.6 |       3   |
+| KOTAKBANK  |   430.5  |     3   |      52 |      4.3 |     17.6 |            -5   |       2.2 |
+| ULTRACEMCO | 11050    |     2.9 |      54 |      0.5 |      0   |            -1.5 |       2.4 |
+| WIPRO      |   189.84 |     2.5 |      73 |     14.4 |     15.2 |            -3.8 |       2.7 |
+| DRREDDY    |  1229.5  |     2.4 |      55 |      1.5 |     10.7 |            -1.9 |       2.2 |
 
 ## NIFTY 50 swing scan: weakest
 
 | symbol     |   close |   score |   rsi14 |   ret_1m |   rel_3m |
 |:-----------|--------:|--------:|--------:|---------:|---------:|
-| HINDUNILVR |  1828.3 |       0 |      38 |     -6.1 |     -9.7 |
-| NTPC       |   302.6 |       0 |      30 |     -7.3 |     -7.3 |
-| MAXHEALTH  |   817   |       0 |      21 |    -23.4 |    -19   |
-| SHRIRAMFIN |   900.9 |       0 |      35 |    -11   |     -9.5 |
-| TMPV       |   270   |       0 |      33 |    -10.5 |    -12.2 |
+| SBILIFE    |  1640   |       0 |      37 |     -6.6 |     -6.2 |
+| SHRIRAMFIN |   865   |       0 |      30 |    -14   |    -10.4 |
+| SUNPHARMA  |  1748   |       0 |      37 |     -5.3 |     -5.2 |
+| POWERGRID  |   247.4 |       0 |      36 |     -7   |     -8.9 |
+| TMPV       |   264.6 |       0 |      30 |    -11.8 |    -13.1 |
 
 ## Disclaimer
 

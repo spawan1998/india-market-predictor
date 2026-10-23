@@ -2,9 +2,9 @@
  "capital_start": 200000.0,
  "cash": 140098.11410710448,
  "max_sessions": 15,
- "sessions_done": 8,
+ "sessions_done": 9,
  "created": "2026-10-09",
- "last_run_date": "2026-10-22",
+ "last_run_date": "2026-10-23",
  "finished": false,
  "positions": [
   {
@@ -18,7 +18,7 @@
    "atr": 9.850217887804073,
    "half_taken": false,
    "highest_close": 447.95001220703125,
-   "sessions": 6,
+   "sessions": 7,
    "reason": "close 441.00 is above its 50-day and 200-day averages (+7.7% / +10.4%), it beat NIFTY by +24.0% over 3 months, RSI 68, -1.0% from its 20-day high, scan score 4.8/5, model P(up) 0.41 (tie-breaker only, no proven edge)"
   },
   {
@@ -32,7 +32,7 @@
    "atr": 43.60901452349495,
    "half_taken": true,
    "highest_close": 1834.699951171875,
-   "sessions": 4,
+   "sessions": 5,
    "reason": "close 1,575.20 is above its 50-day and 200-day averages (+0.1% / +5.6%), it beat NIFTY by +11.2% over 3 months, RSI 56, -0.9% from its 20-day high, scan score 4.6/5, model P(up) 0.49 (tie-breaker only, no proven edge)"
   },
   {
@@ -46,7 +46,7 @@
    "atr": 25.099294270183716,
    "half_taken": false,
    "highest_close": 1398.5,
-   "sessions": 3,
+   "sessions": 4,
    "reason": "close 1,389.40 is above its 50-day and 200-day averages (+0.3% / +3.3%), it beat NIFTY by +3.3% over 3 months, RSI 58, +0.0% from its 20-day high, scan score 3.4/5, model P(up) 0.54 (tie-breaker only, no proven edge)"
   }
  ],
@@ -123,6 +123,12 @@
    "equity": 200892.71,
    "cash": 140098.11,
    "nifty": 22687.650390625
+  },
+  {
+   "date": "2026-10-23",
+   "equity": 200247.11,
+   "cash": 140098.11,
+   "nifty": 22600.0
   }
  ],
  "nifty_start": 22520.44921875
