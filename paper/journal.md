@@ -99,3 +99,13 @@ NIFTY 22,600, BELOW its 200-day SMA (24,125): defensive mode, risk halved to 0.5
 - No new orders: no NIFTY 50 stock passed all entry rules today (close above SMA 50 above SMA 200, beating NIFTY over 3 months, RSI 45-70, within 3% of its 20-day high). Cash is a position.
 
 Equity Rs 200,247 (+0.12% since start) vs NIFTY +0.35%. Cash Rs 140,098, 3 open position(s), 0 order(s) for the next open.
+
+## Session 10 of 15: 2026-10-26
+
+NIFTY 22,753, BELOW its 200-day SMA (24,108): defensive mode, risk halved to 0.5% of equity per trade, because the index trend is against new longs.
+- Holding KOTAKBANK: 50 shares, close 440.75, -118 unrealised (-0.1R), stop 423.40, target 482.50.
+- Holding TECHM: 6 shares, close 1,795.00, +1,170 unrealised (+2.2R), stop 1,729.51, target 1,774.44.
+- Holding ICICIBANK: 20 shares, close 1,403.00, +160 unrealised (+0.2R), stop 1,344.80, target 1,495.40.
+- No new orders: no NIFTY 50 stock passed all entry rules today (close above SMA 50 above SMA 200, beating NIFTY over 3 months, RSI 45-70, within 3% of its 20-day high). Cash is a position.
+
+Equity Rs 200,966 (+0.48% since start) vs NIFTY +1.03%. Cash Rs 140,098, 3 open position(s), 0 order(s) for the next open.
