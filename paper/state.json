@@ -2,9 +2,9 @@
  "capital_start": 200000.0,
  "cash": 140098.11410710448,
  "max_sessions": 15,
- "sessions_done": 10,
+ "sessions_done": 11,
  "created": "2026-10-09",
- "last_run_date": "2026-10-26",
+ "last_run_date": "2026-10-27",
  "finished": false,
  "positions": [
   {
@@ -18,7 +18,7 @@
    "atr": 9.850217887804073,
    "half_taken": false,
    "highest_close": 447.95001220703125,
-   "sessions": 8,
+   "sessions": 9,
    "reason": "close 441.00 is above its 50-day and 200-day averages (+7.7% / +10.4%), it beat NIFTY by +24.0% over 3 months, RSI 68, -1.0% from its 20-day high, scan score 4.8/5, model P(up) 0.41 (tie-breaker only, no proven edge)"
   },
   {
@@ -32,7 +32,7 @@
    "atr": 43.60901452349495,
    "half_taken": true,
    "highest_close": 1834.699951171875,
-   "sessions": 6,
+   "sessions": 7,
    "reason": "close 1,575.20 is above its 50-day and 200-day averages (+0.1% / +5.6%), it beat NIFTY by +11.2% over 3 months, RSI 56, -0.9% from its 20-day high, scan score 4.6/5, model P(up) 0.49 (tie-breaker only, no proven edge)"
   },
   {
@@ -46,11 +46,17 @@
    "atr": 25.099294270183716,
    "half_taken": false,
    "highest_close": 1403.0,
-   "sessions": 5,
+   "sessions": 6,
    "reason": "close 1,389.40 is above its 50-day and 200-day averages (+0.3% / +3.3%), it beat NIFTY by +3.3% over 3 months, RSI 58, +0.0% from its 20-day high, scan score 3.4/5, model P(up) 0.54 (tie-breaker only, no proven edge)"
   }
  ],
- "pending": [],
+ "pending": [
+  {
+   "symbol": "ETERNAL",
+   "risk_pct": 0.5,
+   "reason": "close 331.00 is above its 50-day and 200-day averages (+2.1% / +18.3%), it beat NIFTY by +17.1% over 3 months, RSI 56, -1.2% from its 20-day high, scan score 4.8/5, model P(up) 0.32 (tie-breaker only, no proven edge)"
+  }
+ ],
  "closed": [
   {
    "symbol": "TECHM",
@@ -135,6 +141,12 @@
    "equity": 200965.61,
    "cash": 140098.11,
    "nifty": 22753.19921875
+  },
+  {
+   "date": "2026-10-27",
+   "equity": 200829.51,
+   "cash": 140098.11,
+   "nifty": 22749.75
   }
  ],
  "nifty_start": 22520.44921875

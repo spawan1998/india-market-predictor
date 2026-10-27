@@ -1,12 +1,12 @@
-## NIFTY50 daily read: 2026-10-26
+## NIFTY50 daily read: 2026-10-27
 
-Close **22,753.20** (2026-10-26). Model P(up over next 5 sessions) = **0.435**: mild bearish lean.
+Close **22,749.75** (2026-10-27). Model P(up over next 5 sessions) = **0.369**: BEARISH lean (strong for this model).
 
 ![price](./NIFTY50_price.png)
 
 ## How much to trust it
 
-Walk-forward out-of-sample: accuracy 0.519, balanced 0.493, AUC 0.501, always-up baseline 0.567 over 3661 predictions. **No proven edge** (AUC ~0.5): treat the probability as noise. Close is below the 200-day SMA.
+Walk-forward out-of-sample: accuracy 0.519, balanced 0.493, AUC 0.501, always-up baseline 0.567 over 3662 predictions. **No proven edge** (AUC ~0.5): treat the probability as noise. Close is below the 200-day SMA.
 
 | strategy | CAGR | max DD | Sharpe | switches |
 |---|---|---|---|---|
@@ -23,28 +23,28 @@ Costs 20.0 bps per switch; ml enters above 0.55, exits below 0.50.
 
 ## NIFTY 50 swing scan: strongest
 
-| symbol     |    close |   score |   rsi14 |   ret_1m |   rel_3m |   from_20d_high |   atr_pct |
-|:-----------|---------:|--------:|--------:|---------:|---------:|----------------:|----------:|
-| ICICIBANK  |  1403    |     4.3 |      59 |      4.7 |      3   |            -0.6 |       1.8 |
-| ETERNAL    |   325.55 |     4.2 |      53 |     -5   |     20.5 |            -4.2 |       3.2 |
-| BHARTIARTL |  1917.5  |     3.9 |      62 |      4.6 |      5.3 |            -0.6 |       2.3 |
-| TECHM      |  1795    |     3.8 |      72 |     16.2 |     20.3 |            -2.7 |       3   |
-| DRREDDY    |  1310.9  |     3.7 |      70 |      8.2 |     18.1 |            -0.6 |       2.4 |
-| JSWSTEEL   |  1260    |     3.6 |      55 |     -2.9 |      5.8 |            -2.2 |       2.7 |
-| INFY       |  1166    |     3.5 |      65 |     14.3 |     16.3 |            -2.7 |       3.7 |
-| KOTAKBANK  |   440.75 |     3.5 |      59 |      6.7 |     18.8 |            -2.7 |       2.3 |
-| ULTRACEMCO | 11180    |     3.2 |      57 |      0.2 |      0.6 |            -0.3 |       2.3 |
-| ADANIPORTS |  1752.5  |     2.7 |      50 |     -3   |      3.4 |            -3.8 |       2.7 |
+| symbol     |   close |   score |   rsi14 |   ret_1m |   rel_3m |   from_20d_high |   atr_pct |
+|:-----------|--------:|--------:|--------:|---------:|---------:|----------------:|----------:|
+| ETERNAL    |  331    |     4.8 |      56 |     -1.3 |     17.1 |            -1.2 |       3.1 |
+| BHARTIARTL | 1978.8  |     4.2 |      69 |     10.2 |      9.1 |             0   |       2.3 |
+| ICICIBANK  | 1386.9  |     4   |      54 |      3.9 |      1.9 |            -1.8 |       1.8 |
+| JSWSTEEL   | 1252.7  |     3.6 |      54 |     -1.6 |      5.8 |            -2   |       2.8 |
+| DRREDDY    | 1310    |     3.6 |      70 |      9.1 |     19   |            -1   |       2.4 |
+| KOTAKBANK  |  442.5  |     3.5 |      60 |      9.3 |     20.2 |            -2.3 |       2.2 |
+| INFY       | 1163    |     3.3 |      65 |     14.6 |     13   |            -2.9 |       3.6 |
+| TECHM      | 1811.4  |     2.9 |      73 |     18.4 |     21.2 |            -1.8 |       2.9 |
+| ONGC       |  229.85 |     2.8 |      54 |     -3.8 |      2   |            -2.5 |       1.7 |
+| TATACONSUM | 1000    |     2.8 |      56 |      1.4 |     -4.5 |            -1.1 |       2.4 |
 
 ## NIFTY 50 swing scan: weakest
 
 | symbol     |   close |   score |   rsi14 |   ret_1m |   rel_3m |
 |:-----------|--------:|--------:|--------:|---------:|---------:|
-| SBILIFE    |  1643.7 |       0 |      39 |     -6.6 |     -7.3 |
-| TATACONSUM |   936.5 |       0 |      36 |     -5.8 |     -9.7 |
-| SUNPHARMA  |  1740   |       0 |      36 |     -6.7 |     -6.1 |
-| POWERGRID  |   247   |       0 |      36 |     -8.6 |     -9.6 |
-| TMPV       |   263.7 |       0 |      29 |    -12.2 |    -14.3 |
+| JIOFIN     |  207.24 |       0 |      33 |     -8.8 |     -6.9 |
+| INDIGO     | 4596.5  |       0 |      36 |     -6   |     -6.9 |
+| HINDUNILVR | 1818    |       0 |      37 |     -6   |    -11.2 |
+| SBILIFE    | 1633    |       0 |      37 |     -7   |     -7.3 |
+| TMPV       |  261.2  |       0 |      28 |    -11.5 |    -15.1 |
 
 ## Disclaimer
 
