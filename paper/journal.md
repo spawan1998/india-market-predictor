@@ -119,3 +119,15 @@ NIFTY 22,750, BELOW its 200-day SMA (24,091): defensive mode, risk halved to 0.5
 - **ORDER for the next open: buy ETERNAL** (risk 0.5% of equity, stop 2 ATR = about 21 below entry). Why: close 331.00 is above its 50-day and 200-day averages (+2.1% / +18.3%), it beat NIFTY by +17.1% over 3 months, RSI 56, -1.2% from its 20-day high, scan score 4.8/5, model P(up) 0.32 (tie-breaker only, no proven edge).
 
 Equity Rs 200,830 (+0.41% since start) vs NIFTY +1.02%. Cash Rs 140,098, 3 open position(s), 1 order(s) for the next open.
+
+## Session 12 of 15: 2026-10-28
+
+NIFTY 22,699, BELOW its 200-day SMA (24,073): defensive mode, risk halved to 0.5% of equity per trade, because the index trend is against new longs.
+- **ENTERED ETERNAL**: 48 shares at the open 330.00 (cost Rs 32). Stop 309.40 (2 ATR below, risking Rs 989 = 1R), first target 371.20 (+2R). Why: close 331.00 is above its 50-day and 200-day averages (+2.1% / +18.3%), it beat NIFTY by +17.1% over 3 months, RSI 56, -1.2% from its 20-day high, scan score 4.8/5, model P(up) 0.32 (tie-breaker only, no proven edge)
+- **EXITED KOTAKBANK**: 50 shares at 440.00, P&L Rs -243 (-0.2R). Why: held 10 sessions and still below entry; time stop, the idea is not working.
+- Holding TECHM: 6 shares, close 1,776.60, +1,060 unrealised (+2.0R), stop 1,729.51, target 1,774.44.
+- Holding ICICIBANK: 20 shares, close 1,377.60, -348 unrealised (-0.3R), stop 1,344.80, target 1,495.40.
+- Holding ETERNAL: 48 shares, close 326.00, -192 unrealised (-0.2R), stop 309.40, target 371.20.
+- **ORDER for the next open: buy KOTAKBANK** (risk 0.5% of equity, stop 2 ATR = about 19 below entry). Why: close 440.00 is above its 50-day and 200-day averages (+4.6% / +10.0%), it beat NIFTY by +19.6% over 3 months, RSI 58, -2.9% from its 20-day high, scan score 3.4/5, model P(up) 0.51 (tie-breaker only, no proven edge).
+
+Equity Rs 200,042 (+0.02% since start) vs NIFTY +0.79%. Cash Rs 146,182, 3 open position(s), 1 order(s) for the next open.

@@ -1,26 +1,12 @@
 {
  "capital_start": 200000.0,
- "cash": 140098.11410710448,
+ "cash": 146182.4341071045,
  "max_sessions": 15,
- "sessions_done": 11,
+ "sessions_done": 12,
  "created": "2026-10-09",
- "last_run_date": "2026-10-27",
+ "last_run_date": "2026-10-28",
  "finished": false,
  "positions": [
-  {
-   "symbol": "KOTAKBANK",
-   "qty": 50,
-   "entry": 443.1000061035156,
-   "entry_date": "2026-10-13",
-   "stop": 423.4,
-   "target": 482.5,
-   "r": 19.700006103515648,
-   "atr": 9.850217887804073,
-   "half_taken": false,
-   "highest_close": 447.95001220703125,
-   "sessions": 9,
-   "reason": "close 441.00 is above its 50-day and 200-day averages (+7.7% / +10.4%), it beat NIFTY by +24.0% over 3 months, RSI 68, -1.0% from its 20-day high, scan score 4.8/5, model P(up) 0.41 (tie-breaker only, no proven edge)"
-  },
   {
    "symbol": "TECHM",
    "qty": 6,
@@ -32,7 +18,7 @@
    "atr": 43.60901452349495,
    "half_taken": true,
    "highest_close": 1834.699951171875,
-   "sessions": 7,
+   "sessions": 8,
    "reason": "close 1,575.20 is above its 50-day and 200-day averages (+0.1% / +5.6%), it beat NIFTY by +11.2% over 3 months, RSI 56, -0.9% from its 20-day high, scan score 4.6/5, model P(up) 0.49 (tie-breaker only, no proven edge)"
   },
   {
@@ -46,15 +32,29 @@
    "atr": 25.099294270183716,
    "half_taken": false,
    "highest_close": 1403.0,
-   "sessions": 6,
+   "sessions": 7,
    "reason": "close 1,389.40 is above its 50-day and 200-day averages (+0.3% / +3.3%), it beat NIFTY by +3.3% over 3 months, RSI 58, +0.0% from its 20-day high, scan score 3.4/5, model P(up) 0.54 (tie-breaker only, no proven edge)"
+  },
+  {
+   "symbol": "ETERNAL",
+   "qty": 48,
+   "entry": 330.0,
+   "entry_date": "2026-10-28",
+   "stop": 309.4,
+   "target": 371.2,
+   "r": 20.600000000000023,
+   "atr": 10.300631656847953,
+   "half_taken": false,
+   "highest_close": 330.0,
+   "sessions": 0,
+   "reason": "close 331.00 is above its 50-day and 200-day averages (+2.1% / +18.3%), it beat NIFTY by +17.1% over 3 months, RSI 56, -1.2% from its 20-day high, scan score 4.8/5, model P(up) 0.32 (tie-breaker only, no proven edge)"
   }
  ],
  "pending": [
   {
-   "symbol": "ETERNAL",
+   "symbol": "KOTAKBANK",
    "risk_pct": 0.5,
-   "reason": "close 331.00 is above its 50-day and 200-day averages (+2.1% / +18.3%), it beat NIFTY by +17.1% over 3 months, RSI 56, -1.2% from its 20-day high, scan score 4.8/5, model P(up) 0.32 (tie-breaker only, no proven edge)"
+   "reason": "close 440.00 is above its 50-day and 200-day averages (+4.6% / +10.0%), it beat NIFTY by +19.6% over 3 months, RSI 58, -2.9% from its 20-day high, scan score 3.4/5, model P(up) 0.51 (tie-breaker only, no proven edge)"
   }
  ],
  "closed": [
@@ -79,6 +79,17 @@
    "pnl": -966.03,
    "r_multiple": -1.0,
    "why": "stop 2,763.95 was hit (day's low 2,754.00); a stop is not negotiable"
+  },
+  {
+   "symbol": "KOTAKBANK",
+   "qty": 50,
+   "entry": 443.1000061035156,
+   "exit": 440.0,
+   "entry_date": "2026-10-13",
+   "exit_date": "2026-10-28",
+   "pnl": -243.31,
+   "r_multiple": -0.16,
+   "why": "held 10 sessions and still below entry; time stop, the idea is not working"
   }
  ],
  "equity": [
@@ -147,6 +158,12 @@
    "equity": 200829.51,
    "cash": 140098.11,
    "nifty": 22749.75
+  },
+  {
+   "date": "2026-10-28",
+   "equity": 200042.03,
+   "cash": 146182.43,
+   "nifty": 22698.849609375
   }
  ],
  "nifty_start": 22520.44921875
