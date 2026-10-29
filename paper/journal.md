@@ -131,3 +131,16 @@ NIFTY 22,699, BELOW its 200-day SMA (24,073): defensive mode, risk halved to 0.5
 - **ORDER for the next open: buy KOTAKBANK** (risk 0.5% of equity, stop 2 ATR = about 19 below entry). Why: close 440.00 is above its 50-day and 200-day averages (+4.6% / +10.0%), it beat NIFTY by +19.6% over 3 months, RSI 58, -2.9% from its 20-day high, scan score 3.4/5, model P(up) 0.51 (tie-breaker only, no proven edge).
 
 Equity Rs 200,042 (+0.02% since start) vs NIFTY +0.79%. Cash Rs 146,182, 3 open position(s), 1 order(s) for the next open.
+
+## Session 13 of 15: 2026-10-29
+
+NIFTY 22,937, BELOW its 200-day SMA (24,057): defensive mode, risk halved to 0.5% of equity per trade, because the index trend is against new longs.
+- **ENTERED KOTAKBANK**: 53 shares at the open 441.80 (cost Rs 47). Stop 423.07 (2 ATR below, risking Rs 993 = 1R), first target 479.26 (+2R). Why: close 440.00 is above its 50-day and 200-day averages (+4.6% / +10.0%), it beat NIFTY by +19.6% over 3 months, RSI 58, -2.9% from its 20-day high, scan score 3.4/5, model P(up) 0.51 (tie-breaker only, no proven edge)
+- Holding TECHM: 6 shares, close 1,769.60, +1,018 unrealised (+1.9R), stop 1,729.51, target 1,774.44.
+- Holding ICICIBANK: 20 shares, close 1,386.60, -168 unrealised (-0.2R), stop 1,344.80, target 1,495.40.
+- Holding ETERNAL: 48 shares, close 337.85, +377 unrealised (+0.4R), stop 309.40, target 371.20.
+- Holding KOTAKBANK: 53 shares, close 459.00, +912 unrealised (+0.9R), stop 423.07, target 479.26.
+- No new orders: already holding the maximum of 4 positions.
+- Also qualified but not taken (slot or daily limit): ADANIPORTS.
+
+Equity Rs 201,614 (+0.81% since start) vs NIFTY +1.85%. Cash Rs 122,720, 4 open position(s), 0 order(s) for the next open.
