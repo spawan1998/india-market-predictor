@@ -144,3 +144,14 @@ NIFTY 22,937, BELOW its 200-day SMA (24,057): defensive mode, risk halved to 0.5
 - Also qualified but not taken (slot or daily limit): ADANIPORTS.
 
 Equity Rs 201,614 (+0.81% since start) vs NIFTY +1.85%. Cash Rs 122,720, 4 open position(s), 0 order(s) for the next open.
+
+## Session 14 of 15: 2026-10-30
+
+NIFTY 23,053, BELOW its 200-day SMA (24,041): defensive mode, risk halved to 0.5% of equity per trade, because the index trend is against new longs.
+- Holding TECHM: 6 shares, close 1,790.80, +1,145 unrealised (+2.2R), stop 1,729.51, target 1,774.44.
+- Holding ICICIBANK: 20 shares, close 1,398.00, +60 unrealised (+0.1R), stop 1,344.80, target 1,495.40.
+- Holding ETERNAL: 48 shares, close 343.65, +655 unrealised (+0.7R), stop 309.40, target 371.20.
+- Holding KOTAKBANK: 53 shares, close 461.60, +1,049 unrealised (+1.1R), stop 423.07, target 479.26.
+- No new orders: the challenge ends too soon for a new swing trade to play out.
+
+Equity Rs 202,385 (+1.19% since start) vs NIFTY +2.37%. Cash Rs 122,720, 4 open position(s), 0 order(s) for the next open.
