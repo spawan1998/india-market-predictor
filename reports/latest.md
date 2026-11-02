@@ -1,4 +1,4 @@
-## NIFTY50 daily read: 2026-10-30
+## NIFTY50 daily read: 2026-11-02
 
 Close **23,053.10** (2026-10-30). Model P(up over next 5 sessions) = **0.376**: BEARISH lean (strong for this model).
 
