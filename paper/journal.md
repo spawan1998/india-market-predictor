@@ -155,3 +155,28 @@ NIFTY 23,053, BELOW its 200-day SMA (24,041): defensive mode, risk halved to 0.5
 - No new orders: the challenge ends too soon for a new swing trade to play out.
 
 Equity Rs 202,385 (+1.19% since start) vs NIFTY +2.37%. Cash Rs 122,720, 4 open position(s), 0 order(s) for the next open.
+
+## Session 15 of 15: 2026-11-03
+
+NIFTY 23,811, BELOW its 200-day SMA (24,017): defensive mode, risk halved to 0.5% of equity per trade, because the index trend is against new longs.
+- **EXITED TECHM**: 6 shares at 1,789.10, P&L Rs 1,094 (+2.2R). Why: last session of the challenge, all positions closed at the close.
+- **EXITED ICICIBANK**: 20 shares at 1,424.50, P&L Rs 477 (+0.6R). Why: last session of the challenge, all positions closed at the close.
+- **EXITED ETERNAL**: 48 shares at 349.45, P&L Rs 868 (+0.9R). Why: last session of the challenge, all positions closed at the close.
+- **EXITED KOTAKBANK**: 53 shares at 464.65, P&L Rs 1,115 (+1.2R). Why: last session of the challenge, all positions closed at the close.
+- No new orders: the challenge ends too soon for a new swing trade to play out.
+
+Equity Rs 203,184 (+1.59% since start) vs NIFTY +5.73%. Cash Rs 203,184, 0 open position(s), 0 order(s) for the next open.
+
+## Final result
+
+Closed trades: 7, winners 5, realised P&L Rs 3,184 (+1.59%) vs NIFTY +5.73% over the same 15 sessions. Fifteen sessions is far too few to judge a method; the point was to show the discipline, not the number.
+
+| symbol | entry date | entry | exit date | exit | qty | P&L | R | why |
+|---|---|---|---|---|---|---|---|---|
+| TECHM | 2026-10-15 | 1,600.00 | 2026-10-16 | 1,774.44 | 5 | +838 | +2.0 | first target +2R hit: booked half, stop to breakeven, trailing the rest |
+| TRENT | 2026-10-13 | 2,913.60 | 2026-10-22 | 2,763.95 | 6 | -966 | -1.0 | stop 2,763.95 was hit (day's low 2,754.00); a stop is not negotiable |
+| KOTAKBANK | 2026-10-13 | 443.10 | 2026-10-28 | 440.00 | 50 | -243 | -0.2 | held 10 sessions and still below entry; time stop, the idea is not working |
+| TECHM | 2026-10-15 | 1,600.00 | 2026-11-03 | 1,789.10 | 6 | +1,094 | +2.2 | last session of the challenge, all positions closed at the close |
+| ICICIBANK | 2026-10-16 | 1,395.00 | 2026-11-03 | 1,424.50 | 20 | +477 | +0.6 | last session of the challenge, all positions closed at the close |
+| ETERNAL | 2026-10-28 | 330.00 | 2026-11-03 | 349.45 | 48 | +868 | +0.9 | last session of the challenge, all positions closed at the close |
+| KOTAKBANK | 2026-10-29 | 441.80 | 2026-11-03 | 464.65 | 53 | +1,115 | +1.2 | last session of the challenge, all positions closed at the close |
