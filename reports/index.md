@@ -2,6 +2,7 @@
 
 [Latest report](./latest.md) is regenerated every weekday after the NSE close.
 
+- [2026-11-04 NIFTY50](./2026-11-04_NIFTY50.md)
 - [2026-11-03 NIFTY50](./2026-11-03_NIFTY50.md)
 - [2026-11-02 NIFTY50](./2026-11-02_NIFTY50.md)
 - [2026-10-30 NIFTY50](./2026-10-30_NIFTY50.md)
