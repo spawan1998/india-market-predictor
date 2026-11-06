@@ -1,19 +1,19 @@
-## NIFTY50 daily read: 2026-11-05
+## NIFTY50 daily read: 2026-11-06
 
-Close **24,536.60** (2026-11-05). Model P(up over next 5 sessions) = **0.662**: BULLISH lean (strong for this model).
+Close **25,030.35** (2026-11-06). Model P(up over next 5 sessions) = **0.643**: BULLISH lean (strong for this model).
 
 ![price](./NIFTY50_price.png)
 
 ## How much to trust it
 
-Walk-forward out-of-sample: accuracy 0.518, balanced 0.492, AUC 0.500, always-up baseline 0.568 over 3669 predictions. **No proven edge** (AUC ~0.5): treat the probability as noise. Close is above the 200-day SMA.
+Walk-forward out-of-sample: accuracy 0.518, balanced 0.492, AUC 0.500, always-up baseline 0.568 over 3670 predictions. **No proven edge** (AUC ~0.5): treat the probability as noise. Close is above the 200-day SMA.
 
 | strategy | CAGR | max DD | Sharpe | switches |
 |---|---|---|---|---|
-| ml | -1.7% | -46.0% | -0.06 | 573 |
-| sma200 | +4.0% | -28.6% | 0.41 | 123 |
-| combo | -3.7% | -51.2% | -0.39 | 485 |
-| buy_and_hold | +11.3% | -38.4% | 0.76 | 1 |
+| ml | -1.6% | -46.0% | -0.05 | 573 |
+| sma200 | +4.1% | -28.6% | 0.43 | 123 |
+| combo | -3.6% | -51.2% | -0.37 | 485 |
+| buy_and_hold | +11.5% | -38.4% | 0.77 | 1 |
 
 Costs 20.0 bps per switch; ml enters above 0.55, exits below 0.50.
 
@@ -23,28 +23,28 @@ Costs 20.0 bps per switch; ml enters above 0.55, exits below 0.50.
 
 ## NIFTY 50 swing scan: strongest
 
-| symbol     |   close |   score |   rsi14 |   ret_1m |   rel_3m |   from_20d_high |   atr_pct |
-|:-----------|--------:|--------:|--------:|---------:|---------:|----------------:|----------:|
-| JSWSTEEL   |  1355.6 |     4.2 |      68 |      7.6 |      2.3 |            -1.1 |       2.4 |
-| ADANIPORTS |  1884.6 |     4.2 |      63 |      5.7 |     11.2 |            -3.3 |       2.7 |
-| EICHERMOT  |  7713   |     4.1 |      67 |      9.4 |     -3.1 |             0   |       2.2 |
-| TITAN      |  4834.6 |     4.1 |      68 |      6.3 |     -1.2 |            -0.5 |       2.2 |
-| CIPLA      |  1404.1 |     4   |      65 |      4.8 |     -3.4 |            -0.3 |       1.9 |
-| ETERNAL    |   358.3 |     3.9 |      67 |      8.9 |     15.8 |            -0.4 |       2.9 |
-| BAJFINANCE |  1070   |     3.9 |      70 |     11.1 |     -7.3 |            -0.5 |       2.8 |
-| KOTAKBANK  |   467   |     3.8 |      68 |      8.1 |     17.1 |            -1.2 |       2.2 |
-| ICICIBANK  |  1500   |     3.7 |      73 |     11.7 |      3.8 |            -0.1 |       2   |
-| SUNPHARMA  |  1829   |     3.7 |      61 |      1.4 |     -5.4 |            -1.4 |       2.2 |
+| symbol     |    close |   score |   rsi14 |   ret_1m |   rel_3m |   from_20d_high |   atr_pct |
+|:-----------|---------:|--------:|--------:|---------:|---------:|----------------:|----------:|
+| JSWSTEEL   |  1357.1  |     4.2 |      68 |     10.3 |      2.2 |            -0.9 |       2.4 |
+| GRASIM     |  3227    |     4.2 |      70 |     10.5 |     -1.1 |            -0.2 |       2.1 |
+| CIPLA      |  1411    |     4   |      67 |      6.3 |     -6.1 |             0   |       1.9 |
+| ETERNAL    |   363.15 |     3.9 |      69 |     10.7 |     13.2 |             0   |       2.8 |
+| SUNPHARMA  |  1860    |     3.9 |      67 |      4.4 |     -6.3 |            -0.5 |       2.3 |
+| EICHERMOT  |  7669.5  |     3.9 |      64 |     10.2 |     -5.3 |            -0.6 |       2.3 |
+| ADANIPORTS |  1936.6  |     3.8 |      68 |     10.7 |     12.7 |            -0.6 |       2.7 |
+| ICICIBANK  |  1571.2  |     3.6 |      80 |     15.7 |      6.2 |             0   |       2.1 |
+| BAJAJFINSV |  1864.7  |     3.5 |      69 |      7   |    -12.2 |             0   |       2.4 |
+| BAJAJ-AUTO | 10900    |     3.4 |      61 |     10.3 |     -7.8 |            -0.3 |       2.4 |
 
 ## NIFTY 50 swing scan: weakest
 
 | symbol     |   close |   score |   rsi14 |   ret_1m |   rel_3m |
 |:-----------|--------:|--------:|--------:|---------:|---------:|
-| TATACONSUM |  1077.7 |     2.1 |      70 |     10.4 |     -1.3 |
-| TCS        |  2495.7 |     2   |      63 |     19.5 |      4.3 |
-| SBILIFE    |  1735   |     1.9 |      61 |     -0.9 |     -7.4 |
-| HINDUNILVR |  1982   |     1.7 |      66 |      4.6 |     -4.6 |
-| NESTLEIND  |  1258.3 |     1   |      49 |     -6.2 |    -16.9 |
+| SBILIFE    |  1784   |     2   |      68 |      3.4 |     -5.8 |
+| TCS        |  2498.5 |     2   |      63 |     20.7 |      4.2 |
+| HINDUNILVR |  1998.4 |     1.8 |      68 |      7.1 |     -5.5 |
+| TATACONSUM |  1086.3 |     1.5 |      71 |     12.2 |     -1.9 |
+| NESTLEIND  |  1282.1 |     1   |      53 |     -3.2 |    -18.1 |
 
 ## Disclaimer
 
