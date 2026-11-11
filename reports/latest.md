@@ -1,18 +1,18 @@
-## NIFTY50 daily read: 2026-11-10
+## NIFTY50 daily read: 2026-11-11
 
-Close **25,044.65** (2026-11-09). Model P(up over next 5 sessions) = **0.610**: BULLISH lean (strong for this model).
+Close **25,255.05** (2026-11-11). Model P(up over next 5 sessions) = **0.618**: BULLISH lean (strong for this model).
 
 ![price](./NIFTY50_price.png)
 
 ## How much to trust it
 
-Walk-forward out-of-sample: accuracy 0.518, balanced 0.492, AUC 0.500, always-up baseline 0.568 over 3671 predictions. **No proven edge** (AUC ~0.5): treat the probability as noise. Close is above the 200-day SMA.
+Walk-forward out-of-sample: accuracy 0.518, balanced 0.492, AUC 0.500, always-up baseline 0.568 over 3672 predictions. **No proven edge** (AUC ~0.5): treat the probability as noise. Close is above the 200-day SMA.
 
 | strategy | CAGR | max DD | Sharpe | switches |
 |---|---|---|---|---|
-| ml | -1.6% | -46.0% | -0.05 | 573 |
-| sma200 | +4.1% | -28.6% | 0.43 | 123 |
-| combo | -3.6% | -51.2% | -0.37 | 485 |
+| ml | -1.5% | -46.0% | -0.05 | 573 |
+| sma200 | +4.2% | -28.6% | 0.43 | 123 |
+| combo | -3.5% | -51.2% | -0.37 | 485 |
 | buy_and_hold | +11.5% | -38.4% | 0.77 | 1 |
 
 Costs 20.0 bps per switch; ml enters above 0.55, exits below 0.50.
@@ -25,26 +25,26 @@ Costs 20.0 bps per switch; ml enters above 0.55, exits below 0.50.
 
 | symbol     |    close |   score |   rsi14 |   ret_1m |   rel_3m |   from_20d_high |   atr_pct |
 |:-----------|---------:|--------:|--------:|---------:|---------:|----------------:|----------:|
-| ADANIPORTS |  1942.7  |     4.7 |      68 |     13.7 |     12.8 |            -0.8 |       2.6 |
-| JSWSTEEL   |  1347    |     4   |      65 |     14.6 |      1.7 |            -1.7 |       2.4 |
-| BAJAJ-AUTO | 10979    |     4   |      63 |     13.9 |     -7.8 |             0   |       2.4 |
-| TMCV       |   436.65 |     3.9 |      61 |      5.7 |     -5.6 |            -0.7 |       3.4 |
-| ETERNAL    |   363.45 |     3.8 |      69 |     13.9 |     13.5 |            -0.6 |       2.7 |
-| EICHERMOT  |  7629    |     3.8 |      62 |     12.7 |     -6.8 |            -1.1 |       2.2 |
-| CIPLA      |  1403.8  |     3.8 |      64 |      7.4 |     -6   |            -1.2 |       1.9 |
-| ICICIBANK  |  1589    |     3.7 |      81 |     17.8 |      9.9 |            -0.2 |       2   |
-| BAJFINANCE |  1064.85 |     3.7 |      66 |     11.4 |     -3.1 |            -2.1 |       2.9 |
-| APOLLOHOSP |  8549.5  |     3.7 |      60 |     11.5 |     -6.2 |            -1.7 |       2.5 |
+| JSWSTEEL   |  1353.3  |     4.1 |      66 |     15.9 |      1.2 |            -1.2 |       2.3 |
+| ADANIPORTS |  1907    |     4.1 |      62 |      8.3 |     10.7 |            -3.6 |       2.8 |
+| CIPLA      |  1419.9  |     4   |      68 |      9.1 |     -6   |            -0.1 |       1.8 |
+| BAJAJ-AUTO | 11040    |     3.9 |      64 |     12.9 |     -8.2 |            -0.7 |       2.3 |
+| BAJFINANCE |  1078.8  |     3.8 |      68 |     12.4 |     -4.9 |            -1   |       2.8 |
+| APOLLOHOSP |  8604    |     3.8 |      61 |      7.2 |     -6.1 |            -1.1 |       2.4 |
+| TMCV       |   446.05 |     3.8 |      64 |      8.7 |     -3.7 |            -1.5 |       3.4 |
+| BHARTIARTL |  2109    |     3.7 |      71 |     16.8 |      5.8 |            -0.5 |       2.2 |
+| AXISBANK   |  1336.4  |     3.6 |      69 |      6.1 |      4.4 |            -1.8 |       2.3 |
+| GRASIM     |  3156.7  |     3.5 |      61 |      9.2 |     -9.4 |            -2.5 |       2.2 |
 
 ## NIFTY 50 swing scan: weakest
 
 | symbol     |   close |   score |   rsi14 |   ret_1m |   rel_3m |
 |:-----------|--------:|--------:|--------:|---------:|---------:|
-| SBILIFE    |  1748   |     1.6 |      60 |      3.9 |     -7.7 |
-| INFY       |  1154.1 |     1.4 |      58 |     18.4 |     -1.5 |
-| MAXHEALTH  |   915   |     1.4 |      55 |      4.8 |    -16.4 |
-| TATACONSUM |  1083.9 |     1.3 |      70 |     13.9 |     -1.8 |
-| NESTLEIND  |  1297.8 |     1   |      56 |     -1.6 |    -17.7 |
+| TATACONSUM |  1093   |     1.7 |      72 |     14.5 |     -4.1 |
+| MAXHEALTH  |   928.3 |     1.7 |      58 |      5   |    -15.9 |
+| BAJAJFINSV |  1845   |     1.7 |      64 |      6.4 |    -11.5 |
+| INFY       |  1155   |     1.4 |      59 |     15.4 |     -2.9 |
+| NESTLEIND  |  1288   |     1   |      54 |     -3.4 |    -18.5 |
 
 ## Disclaimer
 
