@@ -1,4 +1,4 @@
-## NIFTY50 daily read: 2026-11-24
+## NIFTY50 daily read: 2026-11-25
 
 Close **25,349.65** (2026-11-23). Model P(up over next 5 sessions) = **0.671**: BULLISH lean (strong for this model).
 
